@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using BeautyCare.Presentation.Models;
+using BeautyCare.Models.ViewModels;
 
 namespace BeautyCare.Presentation.Controllers
 {
