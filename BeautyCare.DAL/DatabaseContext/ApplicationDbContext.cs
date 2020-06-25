@@ -25,6 +25,16 @@ namespace BeautyCare.DAL.DatabaseContext
             return new ApplicationDbContext();
         }
 
+        public virtual DbSet<Menu> Menus { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Headquaters> Headquaters { get; set; }
+        public virtual DbSet<Post> Posts { get; set; }
+        public virtual DbSet<Comment> Comments { get; set; }
+        public virtual DbSet<Configuration> Configurations { get; set; }
+        public virtual DbSet<Advisory> Advisories { get; set; }
+        public virtual DbSet<Trainer> Trainers { get; set; }
+        public virtual DbSet<TraineeOpinion> TraineeOpinions { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
