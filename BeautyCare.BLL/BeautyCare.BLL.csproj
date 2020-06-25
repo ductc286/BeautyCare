@@ -66,6 +66,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BeautyCare.Common\BeautyCare.Common.csproj">
+      <Project>{ea3eb89c-386c-4d56-9c40-c727e92fba28}</Project>
+      <Name>BeautyCare.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BeautyCare.DAL\BeautyCare.DAL.csproj">
       <Project>{b4939af8-bd73-4a5b-bac2-5df407f87457}</Project>
       <Name>BeautyCare.DAL</Name>
