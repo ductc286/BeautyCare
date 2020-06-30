@@ -80,12 +80,12 @@ namespace BeautyCare.Models.Entities
         [DisplayName("Nội dung")]
         [AllowHtml]
         public string Content { get; set; }
-        public DateTime LastModified { get; set; }
-        public bool IsActive { get; set; }
-        public int? MenuId { get; set; }
-        public int? CategoryId { get; set; }
+        public DateTime ? LastModified { get; set; }
+        public bool IsActive { get; set; } = true;
+        public int MenuId { get; set; }
+        public int? CategoryIdT { get; set; }
 
-        public virtual Category Category { get; set; }
+        //public virtual Category Category { get; set; }
         public virtual Menu Menu { get; set; }
 
         public virtual ICollection<Comment> Comments { get; set; }
@@ -116,7 +116,7 @@ namespace BeautyCare.Models.Entities
         [DisplayName("Nội dung")]
         public string Content { get; set; }
         public DateTime DateCreated { get; set; }
-        public bool IsActive { get; set; }
+        public bool IsActive { get; set; } = true;
 
         
         public int ? ParentComentId { get; set; }
