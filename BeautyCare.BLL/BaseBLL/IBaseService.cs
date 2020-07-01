@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BeautyCare.BLL.BaseService
+namespace BeautyCare.BLL.BaseBLL
 {
-    public class BaseService : IBaseService
+    public interface IBaseService
     {
     }
 }

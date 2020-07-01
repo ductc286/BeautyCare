@@ -19,7 +19,8 @@ namespace BeautyCare.Models.Entities
         [DisplayName("Tên danh mục")]
         public string Name { get; set; }
 
-        public virtual ICollection<Category> Categories { get; set; }
+        public virtual IEnumerable<Category> Categories { get; set; }
+        public virtual ICollection<Post> Posts { get; set; }
     }
 
     public class Category
@@ -33,6 +34,7 @@ namespace BeautyCare.Models.Entities
         public int MenuId { get; set; }
 
         public virtual Menu Menu { get; set; }
+        public virtual ICollection<Post> Posts { get; set; }
     }
 
     public class Headquaters
@@ -67,13 +69,14 @@ namespace BeautyCare.Models.Entities
     public class Post
     {
         [Key]
-        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
+        //[DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int PostId { get; set; }
 
         [Required]
         [StringLength(255, ErrorMessage = "UrlAvatar có độ dài tối đa là {1}")]
         [DisplayName("UrlAvatar")]
         public string UrlAvatar { get; set; }
+
         public DateTime DateCreated { get; set; }
 
         [Required]
@@ -82,10 +85,10 @@ namespace BeautyCare.Models.Entities
         public string Content { get; set; }
         public DateTime ? LastModified { get; set; }
         public bool IsActive { get; set; } = true;
-        public int MenuId { get; set; }
-        public int? CategoryIdT { get; set; }
+        public int? MenuId { get; set; }
+        public int? CategoryId { get; set; }
 
-        //public virtual Category Category { get; set; }
+        public virtual Category Category { get; set; }
         public virtual Menu Menu { get; set; }
 
         public virtual ICollection<Comment> Comments { get; set; }

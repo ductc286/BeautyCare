@@ -57,8 +57,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseService\BaseService.cs" />
-    <Compile Include="BaseService\IBaseService.cs" />
+    <Compile Include="BaseBLL\BaseService.cs" />
+    <Compile Include="BaseBLL\IBaseService.cs" />
+    <Compile Include="IService\IMenuService.cs" />
+    <Compile Include="Service\MenuService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -183,38 +183,36 @@ namespace BeautyCare.DAL.InitData
 
             #region seed Post
             var listPosts = new List<Post>(){
-                //new Post()
-                //{
-                //    MenuId = listMenu[0].MenuId,
-                //    CategoryId = listCategories[0].CategoryId,
-                //    UrlAvatar = "",
-                //    DateCreated = DateTime.Now,
-                //    Content = "bai tin doi ngu giang vien"
-                //},
-                //new Post()
-                //{
-                //    MenuId = listMenu[2].MenuId,
-                //    CategoryId = listCategories[0].CategoryId,
-                //    UrlAvatar = "",
-                //    DateCreated = DateTime.Now,
-                //    Content = "bai tin doi ngu giang vien2"
-                    
-                //}
-                //new Post()
-                //{
-                //    MenuId = listMenu[2].MenuId,
-                //    UrlAvatar = "",
-                //    DateCreated = DateTime.Now,
-                //    Content = "bai tin doi ngu giang vien"
-                //}
+                new Post()
+                {
+                    MenuId = listMenu[0].MenuId,
+                    UrlAvatar = "url",
+                    DateCreated = DateTime.Now,
+                    Content = "bai tin doi ngu giang vien"
+                },
+                new Post()
+                {
+                    MenuId = listMenu[0].MenuId,
+                    UrlAvatar = "url",
+                    DateCreated = DateTime.Now,
+                    Content = "bai tin doi ngu giang vien2"
+
+                },
+                new Post()
+                {
+                    CategoryId = listCategories[0].CategoryId,
+                    UrlAvatar = "url",
+                    DateCreated = DateTime.Now,
+                    Content = "bai tin doi ngu giang vien3"
+                }
             };
-            var post = new Post();
-            post.UrlAvatar = "";
-            post.DateCreated = DateTime.Now;
-            post.Content = "bai tin doi ngu giang vien";
-            post.MenuId = listCategories[0].MenuId;
-            //post.CategoryIdT = listCategories[0].CategoryId;
-            listPosts.Add(post);
+            //var post = new Post();
+            //post.UrlAvatar = "url";
+            //post.DateCreated = DateTime.Now;
+            //post.Content = "bai tin doi ngu giang vien";
+            //post.MenuId = listCategories[0].MenuId;
+            ////post.CategoryIdT = listCategories[0].CategoryId;
+            //listPosts.Add(post);
 
             context.Posts.AddRange(listPosts);
             context.SaveChanges();
